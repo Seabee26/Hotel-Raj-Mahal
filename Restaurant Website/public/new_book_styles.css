@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    color: wheat;
+    background-color: maroon;
+}
+div{
+    display: inline-flex;
+    flex-direction: column;
+    padding: 2px 6px 2px 6px;
+    border: solid whitesmoke 3px;
+}
+button{
+    height: 35px;
+    font-weight: bolder;
+    border: rgb(185, 16, 16) 4px solid;
+    color: rgb(223, 14, 14);
+    background-color: whitesmoke;
+    cursor: pointer;
+}

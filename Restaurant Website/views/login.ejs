@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/book_styles.css">
+    <title>Hotel Raj Mahal</title>
+</head>
+<body>
+<h1 style="color:white;"> Welcome to Raj Mahal !</h1>
+    <h1> Login Page</h1>
+    <h2> [Only for Employees] </h2>
+    <br><br>
+    <div style="padding:20px 20px 20px 20px">
+    <form action="/empOnly" method="POST">
+    
+    <label for="id"> Employee ID </label><br>
+    <input id="id" type="text" placeholder="Employee ID" name="id" required>
+    <br><br>
+    <label for="password"> Password </label><br>
+    <input id="password" type="password" placeholder="Password" name="password" required>
+    
+    <br><br><button>Login</button>
+    </form>
+    </div>
+    <br><br>
+    <form action="/hey">
+    <button>Go to Main Page</button>
+    </form>
+    <br>
+    <form action="/book">
+    <button>Go to Booking Page</button>
+    </form>
+</body>
+</html>

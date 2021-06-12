@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin_styles.css">
+    <title>Admin Page</title>
+</head>
+<body>
+    <h1>All Bookings </h1>
+    <table style="border-spacing:10px; border-collapse: collapse; margin-left:10%">
+    <tr style="border-bottom:solid black 3px;">
+        <td style="border-right:solid 2px black; border-left:solid 2px black"> <b>SR. NO.</b></td>
+        <td style="border-right:solid 2px black"><b>NAME</b></td>
+        <td style="border-right:solid 2px black"><b>EMAIL</b></td>
+        <td style="border-right:solid 2px black;padding:0px 10px 0px 5px"><b>CONTACT NO.</b></td>
+        <td style="border-right:solid 2px black;padding:0px 10px 0px 5px"><b>COUNT</b></td>
+        <td style="border-right:solid 2px black"><b>TIME</b></td>
+    </tr>
+    <% for(var i=0; i < d.length; i++) { %>
+    <tr style="border-bottom:solid black 1.5px;">
+        <td style="border-right:solid 2px black;border-left:solid 2px black"><%= i+1 %></td>
+        <td style="border-right:solid 2px black;padding:0px 10px 0px 5px"><%= d[i].name %></td>
+        <td style="border-right:solid 2px black;padding:0px 10px 0px 5px"><%= d[i].email %></td>
+        <td style="border-right:solid 2px black;"><%= d[i].phone %></td>
+        <td style="border-right:solid 2px black;"><%= d[i].count %></td>
+        <td style="border-right:solid 2px black;padding:0px 10px 0px 5px"><%= d[i].time %></td>
+    </tr>
+    <% } %>
+    </table>
+
+    
+<script>
+   
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/new_book_styles.css">
+    <title>New Booking</title>
+</head>
+<body>
+<% if(msg==="S") { %>
+   <h1>Hello <%=data.name%> !</h1>
+<h2> Thank you for booking a seat with us!</h3>
+
+<br>
+<h3> Here are your reservation details:</h3>
+<div>
+<h3> Date: <%=data.time.slice(0,10)%></h3>
+<h3> Time: <%=data.time.slice(11,)%> IST</h3>
+<h3> Count: <%=data.count%></h3>
+</div>
+<br>
+<br>
+<h2>Looking forward to serve you!</h2>
+<% } else if(msg==="AB") { %>
+<h2> Sorry! All seats are booked for this time slot!</h2>
+<h3> Please book a seat for a different time slot</h3>
+<form action="/book"><button type="submit" id="back"> Back to Booking Page </button></form>
+<br><br>
+<% } %>
+<form action="/hey"><button type="submit" id="back"> Back to Main Page </button></form>
+</body>
+</html>

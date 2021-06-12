@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin_styles.css">
+    <title>Admin Page</title>
+</head>
+<body>
+    <h1>Welcome <%=name%> !</h1>
+    <% if(msg==="create"){ %>
+    <script>alert("Employee record created successfully!") </script>
+    <% }%>
+    <% if(msg==="update"){ %>
+    <script>alert("Employee record updated successfully!") </script>
+    <% }%>
+    <% if(msg==="delete"){ %>
+    <script>alert("Employee record deleted successfully!") </script>
+    <% }%>
+     <% if(msg==="m_create"){ %>
+    <script>alert("Menu item created successfully!") </script>
+    <% }%>
+    <% if(msg==="m_update"){ %>
+    <script>alert("Menu item updated successfully!") </script>
+    <% }%>
+    <% if(msg==="m_delete"){ %>
+    <script>alert("Menu item deleted successfully!") </script>
+    <% }%>
+    <form action="/check">
+     <button id="b3" style="text-align:center;  margin-bottom:20px; height:35px; ">Click here to check bookings</button>
+     </form>
+    <div class="c1">
+        <h3> Employee List</h3>
+        <button id="b1_create">Click here to create/update employee</button> <br>
+        <button id="b1_delete">Click here to delete an employee</button>
+        <div id="d1_create" style="visibility:hidden;margin-left:12.5%;margin-top:12%">
+            <form action="/emp/create-update" method="POST">
+            <label for="name">Name</label><br>
+            <input id="name" type="text" placeholder="Name" name="name" required>
+            <br>
+            <label for="id"> Employee ID </label><br>
+            <input id="id" type="text" placeholder="Employee ID" name="id" required>
+            <br>
+            <label for="password"> Password </label><br>
+            <input id="password" type="password" placeholder="Password" name="password" required>
+            <br><br><button >Create/Update Employee</button>
+            </form>
+        </div>
+        
+        <div id="d1_delete" style="visibility:hidden;margin-left:12.5%;margin-top:12%">
+            <form action="/emp/delete" method="POST">
+            <label for="name">Name</label><br>
+            <input id="name" type="text" placeholder="Name" name="name">
+            <br>
+            <label for="id"> Employee ID </label><br>
+            <input id="id" type="text" placeholder="Employee ID" name="id">
+            <br><br> <button>Delete Employee</button>
+            </form>
+        </div>
+    </div>
+    <div class="c2">
+        <h3> Restaurant Menu</h3>
+        <button id="b2_create">Click here to create/update an item in menu</button>
+         <br>
+        <button id="b2_delete">Click here to delete an item in menu</button>
+        <div id="d2_create" style="visibility:hidden;margin-left:12.5%;margin-top:12%">
+            <form action="/menu/create-update" method="POST">
+            <label for="item">Name</label><br>
+            <input id="item" type="text" placeholder="Name of food" name="name" required>
+            <br>
+            <label for="price"> Price </label><br>
+            <input id="price" type="text" placeholder="Price" name="price" required>
+            <br>
+            <label for="Category"> Category </label><br>
+            <input id="Category" type="text" placeholder="Category" name="category" required>
+            <br><br><button >Create/Update Item</button>
+            </form>
+        </div>
+       
+        <div id="d2_delete" style="visibility:hidden;margin-left:12.5%;margin-top:12%">
+            <form action="/menu/delete" method="POST">
+            <label for="item">Name</label><br>
+            <input id="item" type="text" placeholder="Name of food" name="item" required>
+            <br>
+            <br>
+            <button >Delete Item</button>
+            </form>
+        </div>
+    </div>
+    <div id="last">
+    <form action="/hey" style="display:inline;" >
+     <button id="b3" style="width: 200px;margin-top: 1%; margin-right: 10px;height:35px; ">Visit Main Page</button>
+     </form>
+     <form action="/login" style="display:inline">
+     <button id="b3" style="width: 200px;margin-top: 1%; margin-left: 10px;height:35px; ">Logout</button>
+     </form>
+   </div>
+<script>
+    let b1_create= document.querySelector('#b1_create');
+    b1_create.addEventListener('click',function(){
+    document.querySelector('#d1_create').style.visibility="unset";
+    document.querySelector('#d1_delete').style.visibility="hidden";
+    });
+    let b1_delete= document.querySelector('#b1_delete');
+    b1_delete.addEventListener('click',function(){
+    document.querySelector('#d1_create').style.visibility="hidden";
+    document.querySelector('#d1_delete').style.visibility="unset";
+    });
+
+    let b2_create= document.querySelector('#b2_create');
+    b2_create.addEventListener('click',function(){
+    document.querySelector('#d2_create').style.visibility="unset";
+    document.querySelector('#d2_delete').style.visibility="hidden";
+    });
+    let b2_delete= document.querySelector('#b2_delete');
+    b2_delete.addEventListener('click',function(){
+    document.querySelector('#d2_delete').style.visibility="unset";
+    document.querySelector('#d2_create').style.visibility="hidden";
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body{
+    background-color: maroon;
+    color: whitesmoke;
+    text-align: center;
+   }
+.c1{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+    height:350px;
+    margin-right: 3%;
+    border:wheat 5px solid;
+}
+.c2{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+    height:350px;
+    border:wheat 5px solid;
+}
+
+button{
+    height: 35px;
+    font-weight: bolder;
+    border: rgb(185, 16, 16) 4px solid;
+    color: rgb(223, 14, 14);
+    background-color: whitesmoke;
+}
+button:hover{
+    border: solid maroon 3px;
+    box-shadow: 0px 0px 10px 8px wheat;
+}
+#d1_create, #d2_create, #d1_delete, #d2_delete{
+position: absolute;
+margin-top: 15%;
+}

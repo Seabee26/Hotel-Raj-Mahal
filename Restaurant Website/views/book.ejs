@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/book_styles.css">
+    <title>Hotel Raj Mahal</title>
+</head>
+<body>
+    <h1 style="text-decoration:underline; margin-top:0"> Welcome to the Raj Mahal</h1>
+    <h1 style="color:wheat"> Book a Seat with us! Allow us to serve you!</h1>
+    <div>
+    <form action="/book/new" method="POST">
+    <label for="name"> Name </label><br>
+    <input id ="name" type="text" placeholder="Name" name="name" required><br>
+<br>
+     <label for="email"> Email </label><br>
+    <input id ="email" type="text" placeholder="Email" name="email" required><br>
+<br>
+    <label for="phone"> Phone Number </label><br>
+    <input id="phone" type=text  placeholder="Phone Number" name="phone" required><br>
+<br>
+     <label for="count"> Count </label><br>
+    <input id="count" type="number"  min="0" placeholder="Count" name="count" required><br>
+<br>
+     <label for="time">Time </label><br>
+    <input id="time" type="datetime-local" name="time" required><br>
+    <br>
+    <button id="booking"> Confirm Booking</button>
+    </form>
+</div>
+    <form action="/hey"><button type="submit" id="back"> Back to Main Page </button></form>
+</body>
+</html>
