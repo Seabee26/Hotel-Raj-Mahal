@@ -9,7 +9,9 @@ This is a restaurant website using Node.js as backend and MongoDB as a database.
  3. Admin Login
  The login is done using the credentials that are provided by the already existing restaurant admins.
  Once logged in, the admins can do the following:
- <ul> Change or Update Menu
- <ul> Update list of admins
-  <ul> View Details of Bookings done
+ <ul> 
+ <li>Change or Update Menu
+ <li> Update list of admins
+  <li> View Details of Bookings done
+   </ul>
    
